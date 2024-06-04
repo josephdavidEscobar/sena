@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Eren</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .register-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        .register-button:hover {
+            background-color: #45a049;
+        }
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(76, 175, 80, 0.2);
+            width: 100px;
+            height: 100px;
+        }
+        .shape1 {
+            top: 10%;
+            left: 10%;
+        }
+        .shape2 {
+            bottom: 10%;
+            right: 10%;
+        }
+    </style>
+    <script>
+        function checkLogin() {
+            if (localStorage.getItem('loggedIn') !== 'true') {
+                window.location.href = 'login.html';
+            }
+        }
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body onload="checkLogin()">
+
+<div class="sidebar">
+    <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+    <a href="equipos_registrados.html"><i class="fas fa-list"></i> Equipos Registrados</a>
+    <a href="ajustes.html"><i class="fas fa-cogs"></i> Ajustes</a>
+</div>
+
+<div class="main-content">
+    <h1>Bienvenido a Eren</h1>
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <button class="register-button" onclick="location.href='registro.html'">Registrar Equipo</button>
+</div>
+
+</body>
+</html>

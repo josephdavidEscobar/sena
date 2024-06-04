@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+    <a href="equipos_registrados.html"><i class="fas fa-list"></i> Equipos Registrados</a>
+    <a href="ajustes.html"><i class="fas fa-cogs"></i> Ajustes</a>
+</div>
+
+<div class="main-content">
+    <h1>Ajustes</h1>
+    <p>Aquí puedes personalizar tus ajustes.</p>
+</div>
+
+</body>
+</html>
